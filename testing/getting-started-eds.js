@@ -14,6 +14,7 @@ var contacts = eds.collection("contacts");
 contacts.debug = true;
 
 // Insert object to EDS
+/*
 contacts.insert({
     name: "John",
     age: 31,
@@ -29,3 +30,8 @@ contacts.insert({
         console.log("Ooops! Something went wrong!", e);
     }
 });
+*/
+
+eds.rest("GET", "/objects/contacts/532dc8098bf75b31ef00068f", function(e,r){
+    console.log(e,r);
+})

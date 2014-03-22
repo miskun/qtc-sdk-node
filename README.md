@@ -20,8 +20,8 @@ http://developer.qtc.io/qtc/getting-started?snippets=node
 
 If you are looking for service specific guides, please see:
 
-* [Enginio Data Storage](http://developer.qtc.io/eds/getting-started?snippets=node
-* [Managed WebSocket](http://developer.qtc.io/mws/getting-started?snippets=node
+* [Enginio Data Storage](http://developer.qtc.io/eds/getting-started?snippets=node)
+* [Managed WebSocket](http://developer.qtc.io/mws/getting-started?snippets=node)
 
 ## Quick Start
 
