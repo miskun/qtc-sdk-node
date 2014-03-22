@@ -71,9 +71,9 @@ The constructor for EDS instance. The `options` is an object with following para
 ```javascript
 // The typical constructor may look something like this...
 var eds = new Qtc.Eds({
-   address: "https://api.engin.io",
-   backendId: "YOUR_BACKEND_ID_HERE",
-   secret: "YOUR_SECRET_TOKEN_HERE"
+   address: "",     // enter your EDS instance address
+   backendId: "",   // enter your EDS instance backend id
+   secret: ""       // enter your EDS instance secret token
 });
 ```
 

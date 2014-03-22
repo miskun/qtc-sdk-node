@@ -6,17 +6,9 @@ var ENV = require("./settings.js");
 var mws = new Qtc.Mws({
     address: ENV.mws.address,
     socketId: ENV.mws.socketId,
-    //secret: ENV.mws.secret
+    secret: ENV.mws.secret
 });
 
-mws.debug = true;
-
-mws.sendMessage("Moikka!", { sockets: ["*"] }, function(e,res){
+mws.send("Hello World!", { sockets: ["*"] }, function(e,res){
     console.log(e,res);
 });
-
-/*
-mws._getWebSocketUri(function(e,res){
-    console.log(e,res);
-});
-*/
