@@ -21,6 +21,7 @@
 	],
 	"main": "./lib/qtc.js",
     "dependencies": {
+        "ws":"",
         "request":"",
         "form-data":"",
         "when":""

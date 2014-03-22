@@ -51,3 +51,52 @@ contacts.insert({
    }
 });
 ```
+
+## SDK API Reference
+
+### Enginio Data Storage (EDS)
+
+#### Qtc.Eds()
+
+```javascript
+var eds = new Qtc.Eds( options );
+```
+
+The constructor for EDS instance. The `options` is an object with following parameters:
+
+* **address** - An address of this EDS instance
+* **backendId** - A backend id of this EDS instance
+* **secret** - (optional) A security token for this EDS instance
+
+```javascript
+// The typical constructor may look something like this...
+var eds = new Qtc.Eds({
+   address: "https://api.engin.io",
+   backendId: "YOUR_BACKEND_ID_HERE",
+   secret: "YOUR_SECRET_TOKEN_HERE"
+});
+```
+
+#### Qtc.Eds.collection()
+
+```javascript
+var collection = eds.collection( name, useInternals );
+```
+
+The constructor for EDS instance collection. Arguments:
+
+* **name** - A name of the collection.
+* **useInternals** - (optional) This boolean value applies only if the collection name is "users" or "usergroups". If set to true, the collection points to EDS users and usergroups collection. If not set, the collection points to custom user defined objects.
+
+#### Qtc.Eds.rest()
+
+```javascript
+eds.rest( verb, path, options, callback );
+```
+
+The custom rest request to EDS instance. Arguments:
+
+* **verb** - A HTTP request verb: GET, POST, PUT, DELETE
+* **path** - A path for the request. Please see http://developer.qtc.io/eds/rest/reference
+* **options** - (optional) An options for the request
+* **callback** - A callback function to be called when request is completed.
