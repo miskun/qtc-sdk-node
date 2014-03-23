@@ -56,6 +56,37 @@ contacts.insert({
 
 ### Enginio Data Storage (EDS)
 
+* [Qtc.Eds()](#Qtc.Eds()) - Constructor
+* [Qtc.Eds.rest()](#Qtc.Eds.rest()) - Custom REST API requests
+
+**EDS - Custom Data Types**
+
+* [Qtc.Eds.Geoloc()](#Qtc.Eds.Geoloc()) - Helper for creating Geoloc object
+* [Qtc.Eds.Time()](#Qtc.Eds.Time()) - Helper for creating Time object
+* [Qtc.Eds.Ref()](#Qtc.Eds.Ref()) - Helper for creating Ref object
+
+**EDS - Collections**
+
+* [Qtc.Eds.collection()](#Qtc.Eds.collection()) - Constructor
+* [Qtc.Eds.collection.insert()](#Qtc.Eds.collection.insert()) - Insert an object into a collection
+* [Qtc.Eds.collection.update()](#Qtc.Eds.collection.update()) - Update an existing object
+* [Qtc.Eds.collection.remove()](#Qtc.Eds.collection.remove()) - Remove an object from a collection
+* [Qtc.Eds.collection.findOne()](#Qtc.Eds.collection.findOne()) - Find an object in collection
+* [Qtc.Eds.collection.find()](#Qtc.Eds.collection.find()) - Query for objects in a collection
+* [Qtc.Eds.collection.count()](#Qtc.Eds.collection.count()) - Count objects matching the query in a collection
+
+**EDS - Files**
+
+* [Qtc.Eds.collection.attachFile()](#Qtc.Eds.collection.attachFile()) - Attach a file to an object
+* [Qtc.Eds.collection.getFileInfo()](#Qtc.Eds.collection.getFileInfo()) - Get file information
+* [Qtc.Eds.collection.getFileDownloadUrl()](#Qtc.Eds.collection.getFileDownloadUrl()) - Get file download URL
+* [Qtc.Eds.collection.downloadFile()](#Qtc.Eds.collection.downloadFile()) - Download a file
+
+### Managed WebSocket (MWS)
+
+* [Qtc.Mws()](#Qtc.Mws()) - Constructor
+* [Qtc.Mws.rest()](#Qtc.Mws.rest()) - Custom REST API requests
+
 #### Qtc.Eds()
 
 ```javascript
@@ -77,17 +108,6 @@ var eds = new Qtc.Eds({
 });
 ```
 
-#### Qtc.Eds.collection()
-
-```javascript
-var collection = eds.collection( name, useInternals );
-```
-
-The constructor for EDS instance collection. Arguments:
-
-* **name** - A name of the collection.
-* **useInternals** - (optional) This boolean value applies only if the collection name is "users" or "usergroups". If set to true, the collection points to EDS users and usergroups collection. If not set, the collection points to custom user defined objects.
-
 #### Qtc.Eds.rest()
 
 ```javascript
@@ -100,3 +120,17 @@ The custom rest request to EDS instance. Arguments:
 * **path** - A path for the request. Please see http://developer.qtc.io/eds/rest/reference
 * **options** - (optional) An options for the request
 * **callback** - A callback function to be called when request is completed.
+
+#### Qtc.Eds.collection()
+
+```javascript
+var collection = eds.collection( name, useInternals );
+```
+
+The constructor for EDS instance collection. Arguments:
+
+* **name** - A name of the collection.
+* **useInternals** - (optional) This boolean value applies only if the collection name is "users" or "usergroups". If set to true, the collection points to EDS users and usergroups collection. If not set, the collection points to custom user defined objects.
+
+##### EDS Collection Methods
+
