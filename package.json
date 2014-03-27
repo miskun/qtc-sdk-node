@@ -1,7 +1,7 @@
 {
     "name": "qtc",
     "description": "Qt Cloud Services SDK for Node.js",
-    "version": "0.5.2",
+    "version": "0.6.0",
     "tags": [
         "qt",
         "cloud",
@@ -10,10 +10,10 @@
     "author": "Miska Kaipiainen <miska.kaipiainen@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/qtcs/qtc-sdk-node"
+        "url": "https://github.com/miskun/qtc-sdk-node"
     },
 	"bugs": {
-		"url": "http://github.com/qtcs/qtc-sdk-node/issues"
+		"url": "http://github.com/miskun/qtc-sdk-node/issues"
 	},
 	"license": "MIT",
 	"engines": [
