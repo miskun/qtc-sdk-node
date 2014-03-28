@@ -8,7 +8,7 @@ module.exports = {
     },
     mws: {
         address: "YOUR_MWS_INSTANCE_ADDRESS",           // copy/paste your mws address here
-        socketId: "YOUR_MWS_INSTANCE_SOCKET_ID",        // copy/paste your mws socket id here
+        gatewayId: "YOUR_MWS_INSTANCE_GATEWAY_ID",      // copy/paste your mws gateway id here
         secret: "YOUR_MWS_INSTANCE_SECURITY_TOKEN"      // copy/paste your mws security token here (or "")
     }
 };

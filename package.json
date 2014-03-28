@@ -1,7 +1,7 @@
 {
     "name": "qtc",
     "description": "Qt Cloud Services SDK for Node.js",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "tags": [
         "qt",
         "cloud",

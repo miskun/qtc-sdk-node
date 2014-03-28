@@ -5,7 +5,7 @@ var ENV = require("./settings.js");
 
 var mws = new Qtc.Mws({
     address: ENV.mws.address,
-    socketId: ENV.mws.socketId,
+    gatewayId: ENV.mws.gatewayId,
     secret: ENV.mws.secret
 });
 

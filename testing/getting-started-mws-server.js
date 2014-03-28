@@ -5,10 +5,10 @@ var ENV = require("./settings.js");
 
 var mws = new Qtc.Mws({
     address: ENV.mws.address,
-    socketId: ENV.mws.socketId,
+    gatewayId: ENV.mws.gatewayId,
     secret: ENV.mws.secret
 });
 
 mws.send("Hello World!", { sockets: ["*"] }, function(e,res){
-    console.log(e,res);
+    console.log(e, res);
 });
