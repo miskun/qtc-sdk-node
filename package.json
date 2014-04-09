@@ -1,7 +1,7 @@
 {
     "name": "qtc",
     "description": "Qt Cloud Services SDK for Node.js",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "tags": [
         "qt",
         "cloud",
@@ -24,7 +24,7 @@
         "ws":"",
         "request":"",
         "form-data":"",
-        "when":""
+        "class-js2":""
     },
     "devDependencies": {},
     "optionalDependencies": {},
