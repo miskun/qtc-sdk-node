@@ -12,3 +12,6 @@ var mws = new Qtc.Mws({
 mws.send("Hello World!", { sockets: ["*"] }, function(e,res){
     console.log(e, res);
 });
+
+// test sending without callback
+mws.send("Hello World!", { sockets: ["*"] });
