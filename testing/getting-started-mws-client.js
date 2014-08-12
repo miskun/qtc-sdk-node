@@ -9,19 +9,21 @@ var mws = new Qtc.Mws({
     secret: ENV.mws.secret
 });
 
-options = {
-  onOpen: function() {
-      console.log('connected');
-  },
-  onClose: function() {
-      console.log('disconnected');
-  },
-  onMessage: function(data) {
-      console.log('message', data);
-  },
-  onError: function(e, res) {
-    console.log(res);
-  }
-}
+mws.on('open', function(){
+  console.log('connected');
+});
+
+mws.on('close', function(){
+  console.log('disconnected');
+});
+
+mws.on('message', function(data){
+  console.log('message', data);
+});
+
+mws.on('error', function(e, res){
+  console.log(res);
+});
+
 // open WebSocket
-mws.open(options);
+mws.open();
