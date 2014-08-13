@@ -9,27 +9,21 @@ var mws = new Qtc.Mws({
     secret: ENV.mws.secret
 });
 
-mws.getSocketAddress(function(e,res){
-    if(!e){
-        var address = res.uri;
-        console.log("Opening websocket at " + address);
-
-        // open WebSocket
-        var socket = new mws.socket(address);
-
-        // set some event handlers
-        socket.on('open', function() {
-            console.log('connected');
-        });
-        socket.on('close', function() {
-            console.log('disconnected');
-        });
-        socket.on('message', function(data) {
-            console.log('message', data);
-        });
-
-    } else {
-        console.log("Oops! Something went wrong!", e, res);
-    }
-
+mws.on('open', function(){
+  console.log('connected');
 });
+
+mws.on('close', function(){
+  console.log('disconnected');
+});
+
+mws.on('message', function(data){
+  console.log('message', data);
+});
+
+mws.on('error', function(e, res){
+  console.log(res);
+});
+
+// open WebSocket
+mws.open();
