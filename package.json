@@ -1,7 +1,7 @@
 {
     "name": "qtc",
     "description": "Qt Cloud Services SDK for Node.js",
-    "version": "0.6.5",
+    "version": "0.6.9",
     "tags": [
         "qt",
         "cloud",
@@ -20,7 +20,11 @@
 		"node >= 0.8.0"
 	],
 	"main": "./lib/qtc.js",
+    "bin": {
+        "qtc": "bin/qtc-cli.js"
+    },
     "dependencies": {
+        "ini":"",
         "ws":"",
         "request":"",
         "form-data":"",
